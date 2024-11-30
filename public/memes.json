@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "First Meme",
+    "upvotes": 5,
+    "downvotes": 2,
+    "image": "/400.png"
+  },
+  {
+    "id": 2,
+    "title": "Second Meme",
+    "upvotes": 10,
+    "downvotes": 1,
+    "image": "/400.png"
+  },
+  {
+    "id": 3,
+    "title": "Third Meme",
+    "upvotes": 3,
+    "downvotes": 7,
+    "image": "/400.png"
+  }
+]
