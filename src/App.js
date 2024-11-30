@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMemes } from './api/memaApi';
+import { fetchMemes } from './api/memeApi';
 import { setMemes } from './store/reducers/actions';
 import Meme from "./components/Meme";
 import "./App.css";
