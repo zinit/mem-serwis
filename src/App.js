@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMemes } from './api/MemeApi';
+import { fetchMemes } from './api/memeApi';
+import { setMemes } from './store/reducers/actions';
 import Meme from "./components/Meme";
 import "./App.css";
 
@@ -10,7 +11,7 @@ function App() {
 
   useEffect(() => {
     fetchMemes()
-      .then((data) => dispatch({ type: "LOAD_MEMES", payload: data }))
+      .then((data) => dispatch(setMemes(data)))
       .catch((err) => console.error('Failed to fetch memes:', err));
   }, [dispatch]);
 
