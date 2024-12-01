@@ -1,80 +1,60 @@
-# Architektura projektu
+# Mem Serwis
+
+**Mem Serwis** to aplikacja internetowa umożliwiająca przeglądanie i zarządzanie memami. Użytkownicy mogą przeglądać różne kategorie memów, dodawać je do ulubionych oraz wyświetlać losowy mem na stronie głównej.
+
+## Podstrony
+
+- **Home (`/`)**: Wyświetla losowo wybrany mem przy każdym odświeżeniu strony, lub zagłosowaniu. 
+- **Hot Memes (`/hot`)**: Lista memów oznaczonych jako "hot".
+- **Regular Memes (`/regular`)**: Lista standardowych memów, nieoznaczonych jako "hot".
+- **Favourites (`/favourite`)**: Lista memów dodanych do ulubionych przez pojedyńczego użytkownika.
+
+## Technologie
+
+- **React**: Biblioteka JavaScript do budowy interfejsu użytkownika.
+- **Redux**: Zarządzanie stanem aplikacji.
+- **React Router**: Nawigacja między podstronami aplikacji.
+- **AWS S3**: Hosting statycznych plików aplikacji.
+
+## Architektura projektu
+
+- **App.js**: Główny komponent zarządzający nawigacją i stanem aplikacji.
+- **NavBar**: Pasek nawigacyjny z odnośnikami do poszczególnych podstron.
+- **Routes**: Definicje URLi w aplikacji, kierujące do odpowiednich komponentów stron.
+- **HomePage**: Wyświetla losowy mem.
+- **MemeList**: Lista memów dla poszczególnych kategorii.
+- **Meme**: Komponent prezentujący pojedynczy mem.
+
 
 Poniżej znajduje się diagram architektury projektu:
 
 ![Diagram architektury](./docs/diagram_v3.png)
 
+Dane o memach są przechowywane w statycznych plikach JSON i zarządzane za pomocą Redux. 
 
-----------
+- **/data/memes.json**: Lista wszystkich memów dostępnych a stronie.
+- **/data/favourites.json**: Lista ulubionych memów (po id), dla danego użytkownika.
 
+## On-line
 
-# Getting Started with Create React App
+Aktualna wersja dostępna jest on-line pod adresem: [meme-service.s3-website.eu-central-1.amazonaws.com](http://meme-service.s3-website.eu-central-1.amazonaws.com/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instalacja i uruchomienie
 
-## Available Scripts
+1. Sklonuj repozytorium:
+   ```bash
+    git clone https://github.com/zinit/mem-serwis.git
+    
+2. Przejdź do katalogu projektu:
+   ```bash
+    cd mem-serwis
 
-In the project directory, you can run:
+3. Zainstaluj zależności:
+   ```bash
+    npm install
 
-### `npm start`
+4. Uruchom aplikację:
+   ```bash
+    npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aplikacja będzie dostępna pod adresem http://localhost:3000.
