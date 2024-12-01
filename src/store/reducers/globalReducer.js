@@ -1,4 +1,7 @@
-const initState = { memes: [] };
+const initState = { 
+  memes: [],
+  favourites: [] 
+};
 
 export const memeVotesReducer = (state = initState, action) => {
   switch (action.type) {
@@ -25,6 +28,21 @@ export const memeVotesReducer = (state = initState, action) => {
             : meme
         ),
       };
+    case "SET_FAVOURITES":
+      return {
+        ...state,
+        favourites: action.payload,
+      };
+    case "ADD_TO_FAVOURITES":
+      return {
+        ...state,
+        favourites: [...state.favourites, action.payload],
+      };
+    case "REMOVE_FROM_FAVOURITES":
+      return {
+        ...state,
+        favourites: state.favourites.filter((id) => id !== action.payload),
+      };  
     default:
       return state;
   }
