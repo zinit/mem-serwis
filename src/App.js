@@ -5,6 +5,8 @@ import { fetchMemes, fetchFavorites } from './api/memeApi';
 import { setMemes, setFavourites } from './store/reducers/actions';
 import { isHot, isFavourite } from './utils/memeFilters';
 import MemeList from "./pages/MemeList";
+import HomePage from "./pages/HomePage";
+import ErrorPage from "./pages/ErrorPage";
 import "./App.css";
 
 function App() {
@@ -26,11 +28,15 @@ function App() {
       <div className="container">
         <h1>Meme Service</h1>
         <nav>
-          <NavLink to="/hot">Hot Memes</NavLink> | 
-          <NavLink to="/regular">Regular Memes</NavLink> | 
-          <NavLink to="/favourite">Favourites</NavLink>
+          <NavLink to="/">🏠 Home</NavLink> | 
+          <NavLink to="/hot">🔥 Hot Memes</NavLink> | 
+          <NavLink to="/regular">📋 Regular Memes</NavLink> | 
+          <NavLink to="/favourite">❤️ Favourites</NavLink>
         </nav>
         <Routes>
+          <Route path="/" 
+            element={<HomePage memes={memes} />} 
+          />
           <Route path="/hot" 
             element={<MemeList memes={memes.filter((meme) => isHot(meme))} />} 
           />
@@ -40,6 +46,8 @@ function App() {
           <Route path="/favourite"
             element={<MemeList memes={memes.filter((meme) => isFavourite(meme, favourites))} />}
           />
+          <Route path="/*" 
+            element={<ErrorPage />} />
         </Routes>
       </div>
     </Router>
