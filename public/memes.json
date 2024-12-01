@@ -2,15 +2,15 @@
   {
     "id": 1,
     "title": "First Meme",
-    "upvotes": 5,
-    "downvotes": 2,
+    "upvotes": 10,
+    "downvotes": 0,
     "image": "/400.png"
   },
   {
     "id": 2,
     "title": "Second Meme",
-    "upvotes": 10,
-    "downvotes": 1,
+    "upvotes": 5,
+    "downvotes": 5,
     "image": "/400.png"
   },
   {
@@ -18,6 +18,20 @@
     "title": "Third Meme",
     "upvotes": 3,
     "downvotes": 7,
+    "image": "/400.png"
+  },
+  {
+    "id": 4,
+    "title": "Fourth Meme",
+    "upvotes": 3,
+    "downvotes": 7,
+    "image": "/400.png"
+  },
+  {
+    "id": 5,
+    "title": "Fifth Meme",
+    "upvotes": 1,
+    "downvotes": 1,
     "image": "/400.png"
   }
 ]

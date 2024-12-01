@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { fetchMemes } from './api/memeApi';
 import { setMemes } from './store/reducers/actions';
-import Meme from "./components/Meme";
+import { isHot } from './utils/memeFilters';
+import MemeList from "./pages/MemeList";
 import "./App.css";
 
 function App() {
@@ -16,12 +18,22 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="container">
-      <h1>Meme Service</h1>
-      {memes.map((meme) => (
-        <Meme key={meme.id} meme={meme} />
-      ))}
-    </div>
+    <Router>
+      <div className="container">
+        <h1>Meme Service</h1>
+        <nav>
+          <Link to="/hot">Hot Memes</Link> | <Link to="/regular">Regular Memes</Link>
+        </nav>
+        <Routes>
+          <Route path="/hot" 
+            element={<MemeList memes={memes.filter((meme) => isHot(meme))} />} 
+          />
+          <Route path="/regular" 
+            element={<MemeList memes={memes.filter((meme) => !isHot(meme))} />} 
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
