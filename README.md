@@ -2,7 +2,7 @@
 
 Poniżej znajduje się diagram architektury projektu:
 
-![Diagram architektury](./docs/diagram.png)
+![Diagram architektury](./docs/diagram_v3.png)
 
 
 ----------
