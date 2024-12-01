@@ -5,7 +5,7 @@
 ## Podstrony
 
 - **Home (`/`)**: Wyświetla losowo wybrany mem przy każdym odświeżeniu strony, lub zagłosowaniu. 
-- **Hot Memes (`/hot`)**: Lista memów oznaczonych jako "hot".
+- **Hot Memes (`/hot`)**: Lista memów oznaczonych jako "hot" (na podstawie liczby ocen).
 - **Regular Memes (`/regular`)**: Lista standardowych memów, nieoznaczonych jako "hot".
 - **Favourites (`/favourite`)**: Lista memów dodanych do ulubionych przez pojedyńczego użytkownika.
 
@@ -32,7 +32,7 @@ Poniżej znajduje się diagram architektury projektu:
 
 Dane o memach są przechowywane w statycznych plikach JSON i zarządzane za pomocą Redux. 
 
-- **/data/memes.json**: Lista wszystkich memów dostępnych a stronie.
+- **/data/memes.json**: Lista wszystkich memów dostępnych na stronie.
 - **/data/favourites.json**: Lista ulubionych memów (po id), dla danego użytkownika.
 
 ## On-line
@@ -58,3 +58,9 @@ Aktualna wersja dostępna jest on-line pod adresem: [meme-service.s3-website.eu-
     npm start
 
 Aplikacja będzie dostępna pod adresem http://localhost:3000.
+
+
+## Autor
+
+Projekt stworzony przez **[Daniel Łoposzko](https://github.com/zinit)**.
+

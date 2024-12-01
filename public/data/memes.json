@@ -61,6 +61,27 @@
     "upvotes": 0,
     "downvotes": 0,
     "image": "/pics/IMG_1650.JPG"
+  },
+  {
+    "id": 10,
+    "title": "Tenth Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_1584.JPG"
+  },
+  {
+    "id": 11,
+    "title": "Eleventh Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_1533.JPG"
+  },
+  {
+    "id": 12,
+    "title": "Twelfth Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_1423.JPG"
   }
 
 ]
