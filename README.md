@@ -1,3 +1,13 @@
+# Architektura projektu
+
+Poniżej znajduje się diagram architektury projektu:
+
+![Diagram architektury](./docs/diagram.png)
+
+
+----------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
