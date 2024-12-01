@@ -4,34 +4,63 @@
     "title": "First Meme",
     "upvotes": 10,
     "downvotes": 0,
-    "image": "/400.png"
+    "image": "/pics/9c8c9i.jpg"
   },
   {
     "id": 2,
     "title": "Second Meme",
     "upvotes": 5,
     "downvotes": 5,
-    "image": "/400.png"
+    "image": "/pics/9c8cke.jpg"
   },
   {
     "id": 3,
     "title": "Third Meme",
     "upvotes": 3,
     "downvotes": 7,
-    "image": "/400.png"
+    "image": "/pics/cyqm9qtpljb51.webp"
   },
   {
     "id": 4,
     "title": "Fourth Meme",
     "upvotes": 3,
     "downvotes": 7,
-    "image": "/400.png"
+    "image": "/pics/funny-text-memes-1.jpg"
   },
   {
     "id": 5,
     "title": "Fifth Meme",
-    "upvotes": 1,
-    "downvotes": 1,
-    "image": "/400.png"
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/4qfpuRu_v32sqseYs2yX66EuSv9ruUiz2pVCGAzylx8.webp"
+  },
+  {
+    "id": 6,
+    "title": "Sixth Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_2039.JPG"
+  },
+  {
+    "id": 7,
+    "title": "Seventh Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_1932.JPG"
+  },
+  {
+    "id": 8,
+    "title": "Eight Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_1803.JPG"
+  },
+  {
+    "id": 9,
+    "title": "Ninth Meme",
+    "upvotes": 0,
+    "downvotes": 0,
+    "image": "/pics/IMG_1650.JPG"
   }
+
 ]
