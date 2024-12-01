@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, NavLink } from 'react-router-dom';
 import { fetchMemes } from './api/memeApi';
 import { setMemes } from './store/reducers/actions';
 import { isHot } from './utils/memeFilters';
@@ -22,7 +22,7 @@ function App() {
       <div className="container">
         <h1>Meme Service</h1>
         <nav>
-          <Link to="/hot">Hot Memes</Link> | <Link to="/regular">Regular Memes</Link>
+          <NavLink to="/hot">Hot Memes</NavLink> | <NavLink to="/regular">Regular Memes</NavLink>
         </nav>
         <Routes>
           <Route path="/hot" 

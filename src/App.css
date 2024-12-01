@@ -15,9 +15,18 @@ nav {
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #007bff;
+  color: #575757;
+  font-weight: normal;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #000000;
+}
+
+nav a.active {
+  color: #d9534f; 
+  font-weight: bold; 
+  border-bottom: 2px solid #d9534f; 
+  padding-bottom: 2px;
 }
